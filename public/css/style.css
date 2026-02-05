@@ -1,0 +1,231 @@
+/* ================= GLOBAL ================= */
+body {
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #dbeafe, #ecfeff);
+    color: #1f2937;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    padding: 18px 32px;
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.45);
+}
+
+/* BRAND */
+.navbar-brand {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #1e40af !important;
+}
+
+/* MENU */
+.navbar-nav .nav-link {
+    color: #1e3a8a !important;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    margin: 0 6px;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.navbar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.35);
+    color: #1e40af !important;
+    transform: translateY(-2px);
+}
+
+/* ACTIVE */
+.navbar-nav .nav-link.active {
+    background: rgba(255, 255, 255, 0.45);
+    color: #1e40af !important;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    background: linear-gradient(180deg, #ffffff, #f0f7ff);
+    padding: 40px;
+    border-radius: 26px;
+    box-shadow: 0 25px 55px rgba(59, 130, 246, 0.2);
+    margin-top: 40px;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= JUDUL ================= */
+h3 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 26px;
+    color: #2563eb;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+/* ================= BUTTON ================= */
+.btn {
+    border-radius: 16px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(2px) scale(0.97);
+    box-shadow: inset 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Tambah */
+.btn-primary {
+    background: linear-gradient(135deg, #60a5fa, #2563eb);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.45);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
+}
+
+/* Edit */
+.btn-info {
+    background: linear-gradient(135deg, #34d399, #2dd4bf);
+    border: none;
+    color: #064e3b;
+    box-shadow: 0 10px 22px rgba(45, 212, 191, 0.45);
+}
+
+.btn-info:hover {
+    box-shadow: 0 18px 35px rgba(45, 212, 191, 0.6);
+}
+
+/* Hapus */
+.btn-danger {
+    background: linear-gradient(135deg, #fb7185, #ef4444);
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 10px 22px rgba(239, 68, 68, 0.45);
+}
+
+.btn-danger:hover {
+    box-shadow: 0 18px 35px rgba(239, 68, 68, 0.6);
+}
+
+/* ================= TABLE ================= */
+.table {
+    margin-top: 30px;
+    border-radius: 22px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.table thead {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: #ffffff;
+}
+
+.table th {
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.table th,
+.table td {
+    padding: 18px 22px;
+    border-bottom: 1px solid #e5edff;
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: all 0.25s ease;
+}
+
+.table tbody tr:hover {
+    background: #eef4ff;
+    transform: scale(1.01);
+}
+
+.table td:first-child {
+    font-weight: 800;
+    color: #2563eb;
+}
+
+/* ================= AKSI BUTTON ================= */
+.td-aksi {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.td-aksi form {
+    margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .container {
+        padding: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}
+
+/* ================================================= */
+/* ===== PENANDA HALAMAN AKTIF (GARIS DI BAWAH) ===== */
+/* ================================================= */
+.navbar-nav .nav-link {
+    position: relative;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 4px;
+    height: 3px;
+    background-color: #1e40af;
+    border-radius: 8px;
+}
